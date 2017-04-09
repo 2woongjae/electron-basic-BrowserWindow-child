@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>child</title>
+</head>
+<body>
+    <button id="close">close</button>
+
+    <script>
+        const {BrowserWindow} = require('electron').remote;
+        const btn_close = document.querySelector('#close');
+        btn_close.addEventListener('click', () => {
+            BrowserWindow.getFocusedWindow().hide();
+        });
+    </script>
+</body>
+</html>
